@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <link rel="preload" href="fonts/IntroRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/IntroBook.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/IntroBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css" integrity="sha512-rptDreZF629VL73El0GaBEH9tlYEKDJFUr+ysb+9whgSGbwYfGGA61dVtQFL0qC8/SZv/EQFW5JtwEFf+8zKYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js" integrity="sha512-HV1U44HR4mYVDcsxzJpghYyGEy2PvbePe9UFXlV3vnzf4yFhbKA9QNpnhy4VWwnaC2jKzijITVWHPZBCOuc51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header fix-block">
+  <div class="container header__container grid">
+    <div class="header__left">
+      <a class="logo header__logo">SneakMax</a>
+    </div>
+    <div class="header__right">
+      <nav data-menu class="nav header__nav" title="Главное меню">
+        <ul class="nav__list list-reset header__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Подбор товара</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Наша команда</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+    <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+         <span class="burger__line"></span>
+        </button>
+
+      <!-- <button class="burger btn-reset">
+        <span class="burger__line"></span>
+      </button> -->
+
+      <div class="cart header__cart">
+        <button class="btn-reset cart__btn">
+          <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156 12.1784 0.0938088C11.8823 0.280774 11.7865 0.684867 11.9641 0.996475L15.1461 6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164 0.0937645C7.5244 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617 6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421 4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434 7.89468H20C20 7.89468 20 6.57893 20 6.57893V6.57893ZM15.8264 16.5688C15.7715 16.8797 15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798 4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688V16.5688Z"/>
+            </svg>
+          <div class="cart__count">1</div>
+        </button>
+
+        <div class="mini-cart">
+          <div class="mini-cart__top" data-simplebar>
+            <ul class="mini-cart__list list-reset">
+              <li class="mini-cart__item">
+                <article class="mini-cart__product mini-product">
+                  <div class="mini-product__image">
+                    <img src="img\product-image.jpg" alt="">
+                  </div>
+                  <div class="mini-product__content">
+                    <div class="mini-product__text">
+                      <h3 class="mini-product__title">Женские кроссовки Puma Force 1 Shadow</h3>
+                      <span class="mini-product__price">8 678 р</span>
+                    </div>
+                    <button class="btn-reset mini-product__delete" aria-label="Удалить товар">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li class="mini-cart__item">
+                <article class="mini-cart__product mini-product">
+                  <div class="mini-product__image">
+                    <img src="img\product-image.jpg" alt="">
+                  </div>
+                  <div class="mini-product__content">
+                    <div class="mini-product__text">
+                      <h3 class="mini-product__title">Женские кроссовки Puma Force 1 Shadow</h3>
+                      <span class="mini-product__price">8 678 р</span>
+                    </div>
+                    <button class="btn-reset mini-product__delete" aria-label="Удалить товар">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li class="mini-cart__item">
+                <article class="mini-cart__product mini-product">
+                  <div class="mini-product__image">
+                    <img src="img\product-image.jpg" alt="">
+                  </div>
+                  <div class="mini-product__content">
+                    <div class="mini-product__text">
+                      <h3 class="mini-product__title">Женские кроссовки Puma Force 1 Shadow</h3>
+                      <span class="mini-product__price">8 678 р</span>
+                    </div>
+                    <button class="btn-reset mini-product__delete" aria-label="Удалить товар">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div class="mini-cart__bottom">
+            <div class="mini-cart__itog">
+              <span class="mini-cart__txt">Итого:</span>
+              <span class="mini-cart__sum">25 789 р</span>
+            </div>
+            <buttom class="btn btn-reset btn--primary mini-cart__btn" data-graph-path="cart-modal">Перейти в корзину</buttom>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero">
+  <span class="hero__bg-text" aria-hidden="true">SneakMax</span>
+  <div class="container hero__container">
+    <h1 class="hero__title">Кроссовки известных брендов
+      с доставкой по России и СНГ</h1>
+    <p class="hero__descr">
+      Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многие другие по низким ценам
+    </p>
+    <button class="btn-reset btn btn--primary js-move-to">Перейти к покупкам</button>
+  </div>
+</section>
+
+      <section class="catalog">
+  <div class="container catalog__container">
+
+    <h2 class="h2 catalog__title title">Каталог</h2>
+    <div class="catalog__content grid">
+
+      <div class="catalog__left">
+        <div class="catalog-filter">
+          <h3 class="catalog__subtitle">Подбор по параметрам</h3>
+          <div class="catalog__prop">
+            <strong class="catalog__caption">Цена, руб</strong>
+            <div class="catalog-price  catalog__prop-inner">
+              <div class="catalog-price__wrapper">
+                <input type="text" class="catalog-price__input" value="1850">
+                <input type="text" class="catalog-price__input"  value="25768">
+              </div>
+              <div class="catalog-price__elem"></div>
+            </div>
+          </div>
+
+          <div class="catalog__prop">
+            <strong class="catalog__caption">Пол</strong>
+            <div class=" catalog__prop-inner catalog__prop-checkbox">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">мужской</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">женский</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="catalog__prop">
+            <strong class="catalog__caption">Размер</strong>
+            <div class=" catalog__prop-inner">
+              <table class="sizes-table">
+                <caption>Таблица размеров</caption>
+                <tbody>
+                  <tr>
+                    <td>35</td>
+                    <td>36</td>
+                    <td>37</td>
+                  </tr>
+                  <tr>
+                    <td>38</td>
+                    <td>39</td>
+                    <td>40</td>
+                  </tr>
+                  <tr>
+                    <td>41</td>
+                    <td>42</td>
+                    <td>43</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="catalog-filter__btns">
+            <button class="btn btn-reset catalog__apply btn--secondary">Применить</button>
+            <button class="btn-reset catalog__reset">сбросить</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog__grid">
+        <ul class="list-reset catalog-list grid">
+
+        </ul>
+        <button class="catalog__more btn btn-reset btn--primary">
+          Показать еще
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      <section class="about">
+  <img class="about__figure" src="img/about-figure.svg" alt="" aria-hidden="true">
+  <div class="container about__container grid">
+    <div class="about__text">
+      <h2 class="title about__title">Пара слов о нас</h2>
+      <p class="about__descr">
+        <q class="about__quote">
+          Спорт держит нас в форме. Учит дисциплине. Объединяет нас. Через спорт мы можем менять жизни. В том числе с
+          помощью воодушевляющих историй спортсменов. Чтобы помочь тебе подняться и двигаться вперед.
+        </q>
+        <cite class="about__author">SneakMax</cite>
+      </p>
+    </div>
+    <div class="about__image">
+      <img src="img/about.jpg" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+
+      <section class="faq">
+  <div class="container">
+    <h2 class="title faq__title">Часто задаваемые вопросы</h2>
+    <ul class="faq__list list-reset">
+      <li class="faq-accordion">
+        <button class="faq-accordion__control btn-reset" aria-expanded="false">
+          <span class="faq-accordion__title">Вопрос 1</span>
+          <span class="faq-accordion__icon"></span>
+        </button>
+        <div class="faq-accordion__content" aria-hidden="true">
+          <p>А это ответ 1: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми</p>
+
+        </div>
+      </li>
+
+      <li class="faq-accordion">
+        <button class="faq-accordion__control btn-reset" aria-expanded="false">
+          <span class="faq-accordion__title">Вопрос 2</span>
+          <span class="faq-accordion__icon"></span>
+        </button>
+        <div class="faq-accordion__content" aria-hidden="true">
+          <p>А это ответ 2: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="team">
+  <img src="img/team-figure.svg" alt="" aria-hidden="true" class="team__figure">
+  <div class="container">
+    <h2 class="title team__title">Наша команда</h2>
+    <ul class="list-reset team__list grid">
+      <li class="team__item">
+        <img src="img/team-1.jpg" alt="Максим Золотарев" class="team__image">
+        <strong class="team__subtitle">Максим Золотарев</strong>
+        <span class="team__post">Администратор</span>
+      </li>
+      <li class="team__item">
+        <img src="img/team-2.jpg" alt="Максим Золотарев" class="team__image">
+        <strong class="team__subtitle">Максим Золотарев</strong>
+        <span class="team__post">Администратор</span>
+      </li>
+      <li class="team__item">
+        <img src="img/team-3.jpg" alt="Максим Золотарев" class="team__image">
+        <strong class="team__subtitle">Максим Золотарев</strong>
+        <span class="team__post">Администратор</span>
+      </li>
+      <li class="team__item">
+        <img src="img/team-4.jpg" alt="Максим Золотарев" class="team__image">
+        <strong class="team__subtitle">Максим Золотарев</strong>
+        <span class="team__post">Администратор</span>
+      </li>
+      <li class="team__item">
+        <img src="img/team-5.jpg" alt="Максим Золотарев" class="team__image">
+        <strong class="team__subtitle">Максим Золотарев</strong>
+        <span class="team__post">Администратор</span>
+      </li>
+      <li class="team__item">
+        <img src="img/team-6.jpg" alt="Максим Золотарев" class="team__image">
+        <strong class="team__subtitle">Максим Золотарев</strong>
+        <span class="team__post">Администратор</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="contacts">
+  <div class="container contacts__container">
+    <div class="contacts__text">
+      <h2 class="contacts__title title">Контакты</h2>
+      <address class="contacts__item">
+        <h3 class="contacts__subtitle">Главный офис
+          <span class="tooltip">
+            <button class="tooltip__btn btn-reset" aria-describedby="office" aria-label="Описание аддреса">
+              <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.78 7.85175H2.184C2.16533 7.35964 2.212 6.92324 2.324 6.54255C2.44533 6.16187 2.604 5.85082 2.8 5.60941C3.00533 5.35871 3.21067 5.13123 3.416 4.92696C3.62133 4.72268 3.81733 4.49984 4.004 4.25843C4.2 4.00773 4.33067 3.74775 4.396 3.47849C4.47067 2.93067 4.35867 2.50356 4.06 2.19715C3.76133 1.88146 3.36933 1.72361 2.884 1.72361C2.52 1.72361 2.18867 1.84432 1.89 2.08573C1.59133 2.32714 1.414 2.64747 1.358 3.04673H0C0.0373333 2.14608 0.312667 1.46363 0.826 0.999375C1.34867 0.535122 2.03 0.302996 2.87 0.302996C3.64467 0.284426 4.32133 0.47477 4.9 0.874027C5.488 1.27329 5.838 1.79789 5.95 2.44784C6.006 2.80068 6.01533 3.10708 5.978 3.36706C5.94067 3.70133 5.83333 4.01702 5.656 4.31414C5.488 4.60198 5.29667 4.85732 5.082 5.08016C4.87667 5.303 4.67133 5.53977 4.466 5.79047C4.26067 6.03188 4.09267 6.329 3.962 6.68183C3.83133 7.02538 3.77067 7.41535 3.78 7.85175ZM3.626 10.0523C3.458 10.2102 3.24333 10.2891 2.982 10.2891C2.72067 10.2891 2.49667 10.2102 2.31 10.0523C2.13267 9.89446 2.044 9.69019 2.044 9.43949C2.044 9.1888 2.13267 8.98453 2.31 8.82668C2.49667 8.66883 2.72067 8.58991 2.982 8.58991C3.24333 8.58991 3.458 8.66883 3.626 8.82668C3.80333 8.98453 3.892 9.1888 3.892 9.43949C3.892 9.69019 3.80333 9.89446 3.626 10.0523Z" fill="#444B58"/>
+                </svg>
+            </button>
+            <span class="tooltip__txt" role="tooltip" id="office">
+              <span class="visually-hidden">Тултип: </span>
+              Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара
+              просьба задавать в отдел продаж
+            </span>
+          </span>
+        </h3>
+        <a href="" class="contacts__link">+7 (800-78) 9-89-89</a>
+        <span class="contacts__addres">
+          г. Санкт-Петербург, Комсомольская, 43 к1
+        </span>
+      </address>
+      <address class="contacts__item">
+        <h3 class="contacts__subtitle">отдел продаж</h3>
+        <a href="" class="contacts__link">+7 (800-78) 9-89-89</a>
+        <span class="contacts__addres">
+          г. Санкт-Петербург, Комсомольская, 43 к1
+        </span>
+      </address>
+      <ul class="list-reset social">
+        <li class="social__item">
+          <a href="" class="social__link social__link--vk" aria-label="Мы во Вконтакте"></a>
+        </li>
+        <li class="social__item">
+          <a href="" class="social__link social__link--insta" aria-label="Мы в Инстаграм"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="contacts__map" id="map">
+
+    </div>
+  </div>
+</section>
+
+      <section class="insta">
+  <div class="container insta__container">
+    <div class="insta__left">
+      <form action="#" class="callback-form">
+        <h3 class="title insta__title">Есть вопросы?</h3>
+        <p class="insta__descr">
+          Заполните форму и наш менеджер свяжется с вами
+        </p>
+        <input type="text" class="input insta__input" placeholder="Ваше имя">
+        <input type="tel" class="input insta__input" placeholder="Номер телефона">
+        <button class="btn btn-reset btn--primary insta__btn">Отправить</button>
+      </form>
+    </div>
+    <div class="insta__right">
+      <a href="#" class="insta__link-logo">
+        <img src="img/instagram.png" alt="Логотип инстаграмма">
+      </a>
+      <div class="insta__content">
+        <ul class="list-reset insta__list">
+          <li class="insta__item">
+            <a href="#" class="insta__link">
+              <img src="img/insta-1.jpg" alt="" aria-hidden="true">
+            </a>
+            <a href="#" class="insta__link">
+              <img src="img/insta-2.jpg" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li class="insta__item">
+            <a href="#" class="insta__link">
+              <img src="img/insta-3.jpg" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li class="insta__item">
+            <a href="#" class="insta__link">
+              <img src="img/insta-4.jpg" alt="" aria-hidden="true">
+            </a>
+            <a href="#" class="insta__link">
+              <img src="img/insta-5.jpg" alt="" aria-hidden="true">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__left">
+      <a class="logo footer__logo">SneakMax</a>
+    </div>
+    <div class="footer__right">
+      <nav class="nav footer__nav" title="Главное меню">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Подбор товара</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Наша команда</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container prod-modal" role="dialog" aria-modal="true" data-graph-target="prod-modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+
+      <div class="prod-modal__top">
+        <div class="modal-slider ">
+          <div class="modal-slider__container">
+            <div class="swiper-wrapper">
+
+            </div>
+          </div>
+          <div class="modal-preview">
+
+          </div>
+
+        </div>
+
+        <div class="modal-info">
+          <div class="modal-info__top">
+            <span class="modal-info__vendor">Артикул: 879876</span>
+            <span class="modal-info__quantity">В наличии: <span>13 шт</span></span>
+          </div>
+          <div class="modal-info__wrapper">
+
+          </div>
+
+          <button class="btn btn-reset btn--primary modal-info__order">Заказать</button>
+          <ul class="list-reset modal-info__note modal-note">
+            <li class="modal-note__item">Бесплатная доставка до двери</li>
+            <li class="modal-note__item">Оплата заказа при получении</li>
+            <li class="modal-note__item">Обмен в течении двух недель</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prod-modal__bottom prod-bottom">
+        <div class="prod-bottom__column">
+          <h3 class="prod-bottom__title">Описание</h3>
+          <p class="prod-bottom__descr modal-prod-descr">
+
+          </p>
+        </div>
+        <div class="prod-bottom__column">
+          <h3 class="prod-bottom__title">Характеристики</h3>
+          <div class="prod-chars">
+          </div>
+        </div>
+      </div>
+      <div class="prod-modal__video">
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="graph-modal__container cart-modal" role="dialog" aria-modal="true" data-graph-target="cart-modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="cart-modal__top">
+        <h2 class="cart-modal__title">Оформление заказа</h2>
+        <span class="cart-modal__order-number">Заказ 345667</span>
+      </div>
+      <div class="card-modal-order">
+        <div class="card-modal-order__top">
+          <div class="card-modal-order__quantity">Товаров в заказе: <span>3 шт</span></div>
+          <div class="card-modal-order__sum">Общая сумма заказа: <span>25 789 р</span></div>
+        </div>
+    <div class="card-modal-order__content">
+      <button class="btn-reset card-modal-order__show">
+        Состав заказа
+        <svg width="7" height="8" viewBox="0 0 7 8" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_65_784)">
+          <path d="M6.92012 5.68997C6.81343 5.79687 6.64032 5.79704 6.53341 5.69037L3.69335 2.8562C3.58672 2.74959 3.41327 2.7496 3.30645 2.85641L0.466594 5.69037C0.359693 5.79705 0.18658 5.79687 0.0798849 5.68997C-0.0267831 5.58307 -0.0266053 5.40994 0.0802814 5.30328L2.91994 2.46951C3.07992 2.30956 3.28999 2.22961 3.50008 2.22961C3.71005 2.22961 3.92007 2.30953 4.07984 2.46932L6.91972 5.30328C7.02661 5.40994 7.02678 5.58307 6.92012 5.68997Z"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_65_784">
+          <rect width="7" height="7" fill="white" transform="matrix(1 0 0 -1 0 7.5)"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </button>
+      <ul class="list-reset card-modal-order__list">
+        <li class="card-modal-order__item">
+          <article class="card-modal-order__product cart-modal-product">
+            <div class="cart-modal-product__image">
+              <img src="img\product-image.jpg" alt="">
+            </div>
+            <div class="cart-modal-product__content">
+              <div class="cart-modal-product__text">
+                <h3 class="cart-modal-product__title">Женские кроссовки Puma Force 1 Shadow</h3>
+                <span class="cart-modal-product__price">8 678 р</span>
+              </div>
+              <button class="btn-reset cart-modal-product__delete" aria-label="Удалить товар">
+                Удалить
+              </button>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+      </div>
+
+      <form class="cart-modal__form">
+        <input type="text" class="input cart-modal__input" name="name" placeholder="Ваше имя">
+        <input type="tel" class="input cart-modal__input" name="tel" placeholder="Номер телефона">
+        <input type="email" class="input cart-modal__input" name="email" placeholder="E-mail">
+        <button class="btn btn-reset btn--primary cart-modal__btn">Оформить заказ</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
